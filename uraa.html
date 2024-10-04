@@ -111,11 +111,9 @@
             const botMessage = await getBotResponse(userMessage);
             addMessage(botMessage, 'bot');
         }
-
-        const api = 'https://closeaiapi.vercel.app/';
-
+        
         async function getBotResponse(message) {
-            const response = await fetch('${api}/chat', {
+            const response = await fetch('https://closeaiapi.vercel.app/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
